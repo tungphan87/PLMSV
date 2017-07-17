@@ -41,6 +41,6 @@ Outputs:
 
 To Run code:
 1. Install R (https://www.r-project.org/about.html) and C++ compiler (https://clang.llvm.org/get_started.html).
-2. Install required R packages: install.packages(c('Rcpp', 'RcppArmadillo', 'mvtnorm').
+2. Install required R packages: install.packages(c('Rcpp', 'RcppArmadillo', 'mvtnorm')).
 3. Source PL_MSV C++ code: sourceCpp('PL_MSV.cpp') and use PL_MSV just like a regular R function. 
 4. Type >> Rscript simulation.R (on mac) or >> R --no-save simulation.R (on linux) to run an example file with simulated data. 
