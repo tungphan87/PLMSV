@@ -1,6 +1,7 @@
 Particle Learning for Multivariate Stochastic Volatility (MSV) Models
 
 This is a C++ implementation of the particle learning algorithm for MSV models via Rcpp. Ones need the following R packages to run this code :Rcpp, RcppArmadillo, mvtnorm (install.packages(c('Rcpp', 'RcppArmadillo', 'mvtnorm')) to install).
+
 Model: 
 
   y_{jt} exp(x_{jt}/2) \epsilon^y_{jt}
