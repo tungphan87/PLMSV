@@ -10,10 +10,10 @@ where,
 
 Inputs:
 y: J X T matrix of first differences of EEG signals at J channels over T periods (T is typically the length of the encoding period)
-mu0, Sigma0: prior mean and covariance matrix for vector of log-vols at time 0.
+mu0, C0: prior mean and covariance matrix for vector of log-vols at time 0.
 N: number of particles (choosen to balance trade-off between speed and accuracy, N = 5000 typically)
 m, v, p are mixtrure mean, variance, and probability vectors when linearizing y (page 3 eqn 11 and 12 in the manuscript)
-prior: prior for alpha and beta
+
 
 
 Outputs:
@@ -27,6 +27,8 @@ Required R packages:
 Rcpp, RcppArmadillo, bayesm
 
 */
+
+// [[Rcpp::depends(RcppArmadillo)]]
 
 #include <RcppArmadillo.h>
 #include <math.h>
@@ -123,7 +125,7 @@ double likelihood(double y, double mu, double x)
 
 // main function
 // [[Rcpp::export]]
-List PL_MSV(mat y, mat y_star, mat mu0, mat C0, mat theta0, mat Sigma_theta, int k, int n0, mat V0, int N,
+List PL_MSV(mat y, mat y_star, mat mu0, mat C0, mat theta0, mat Sigma_theta, int n0, mat V0, int N,
             NumericVector p, NumericVector m, NumericVector v)
 {
   int T = y.n_cols; // number of time points
