@@ -25,7 +25,7 @@ theta0, Sigma_theta: prior for the vector theta = (\alpha,\beta),
 
 N: number of particles (choosen to balance trade-off between speed and accuracy, N = 5000 typically),
 
-m, v, p are mixtrure mean, variance, and probability vectors when linearizing y (page 3 eqn 11 and 12 in the manuscript).
+m, v, p: mixtrure means, variances, and probability vectors when linearizing y (page 3 eqn 11 and 12 in the manuscript).
 
 Outputs:
 
