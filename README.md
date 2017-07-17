@@ -8,6 +8,7 @@ Model:
   x_{jt} = \alpha_{j} + \beta_{j} x_{j,t-1} + \epsilon^x_{jt} 
   
 where, 
+
   \epsilon^y ~ MVN(0,I)
   
   \epsilon^x ~ MVN(0, \Sigma)
