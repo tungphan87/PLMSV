@@ -4,15 +4,15 @@ This is a C++ implementation of the particle learning algorithm for MSV models v
 
 Model: 
 
-    y_{jt} exp(x_{jt}/2) \epsilon^y_{jt}
+$$y_{jt} = exp(x_{jt}/2) \epsilon^y_{jt}$$
 
-    x_{jt} = \alpha_{j} + \beta_{j} x_{j,t-1} + \epsilon^x_{jt} 
+$$x_{jt} = \alpha_{j} + \beta_{j} x_{j,t-1} + \epsilon^x_{jt}$$
   
 where, 
 
-    \epsilon^y ~ MVN(0,I)
+$$\epsilon^y \sim MVN(0,I)$$
 
-    \epsilon^x ~ MVN(0, \Sigma)
+$$\epsilon^x \sim MVN(0, \Sigma)$$
 
 Inputs: 
 
